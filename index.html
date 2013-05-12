@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Colour Swatches</title>
+    <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/css/bootstrap-combined.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+</head>
+<body class="container">
+    <h1>Color Swatches <small>free to use, by <a href="http://maxmackie.com">@maxmackie</a></small></h1>
+    <div class="row-fluid">
+        <div class="span4">
+            <div class="holder">
+                <div class="swatch">
+                    <span class="colour">rgb(39,40,45)</span>
+                    <span class="colour">rgb(71,77,75)</span>
+                    <span class="colour">rgb(245,66,150)</span>
+                    <span class="colour">rgb(243,254,53)</span>
+                    <span class="colour">rgb(253,255,247)</span>
+                </div>
+                <div class="info">Barcelona</div>
+            </div>
+            <div class="holder">
+                <div class="swatch">
+                    <span class="colour">rgb(41,64,82)</span>
+                    <span class="colour">rgb(68,114,148)</span>
+                    <span class="colour">rgb(143,188,219)</span>
+                    <span class="colour">rgb(244,214,188)</span>
+                    <span class="colour">rgb(248,228,204)</span>
+                </div>
+                <div class="info">Blue Humans</div>
+            </div>
+        </div>
+        <div class="span4">
+            <div class="holder">
+                <div class="swatch">
+                    <span class="colour">rgb(128,211,187)</span>
+                    <span class="colour">rgb(186,253,194)</span>
+                    <span class="colour">rgb(229,243,186)</span>
+                    <span class="colour">rgb(92,73,61)</span>
+                    <span class="colour">rgb(58,53,47)</span>
+                </div>
+                <div class="info">Hungry Dingo</div>
+            </div>
+            <div class="holder">
+                <div class="swatch">
+                    <span class="colour">rgb(255,102,0)</span>
+                    <span class="colour">rgb(246,246,239)</span>
+                    <span class="colour">rgb(130,130,130)</span>
+                    <span class="colour">rgb(0,0,0)</span>
+                </div>
+                <div class="info">Hackers</div>
+            </div>
+        </div>
+        <div class="span4">
+            <div class="holder">
+                <div class="swatch">
+                    <span class="colour">rgb(243,92,159)</span>
+                    <span class="colour">rgb(243,243,243)</span>
+                    <span class="colour">rgb(34,173,194)</span>
+                    <span class="colour">rgb(115,111,102)</span>
+                </div>
+                <div class="info">Fresh</div>
+            </div>
+            <div class="holder">
+                <div class="swatch">
+                    <span class="colour">rgb(77,144,254)</span>
+                    <span class="colour">rgb(221,75,57)</span>
+                    <span class="colour">rgb(241,241,241)</span>
+                    <span class="colour">rgb(119,119,119)</span>
+                </div>
+                <div class="info">Searching</div>
+            </div>
+        </div>
+    </div>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+    <script>
+        var holder = $('.holder');
+
+        holder.each(function() {
+            var swatch = $(this).find('.swatch');
+            var info = $(this).find('.info');
+            var colours = swatch.find('.colour');
+            var width = 100/colours.length + '%';
+            var infoContents = '<div class="colour-names">';
+
+            for (i = 0; i < colours.length; i++) {
+                var bg = colours[i].innerHTML;
+                var tmpbg = bg.substring(3);
+                infoContents += '<span class="name">' + tmpbg + '</span>';
+                $(colours[i]).css('width', width);
+                $(colours[i]).css('background-color', bg);
+                $(colours[i]).text('');
+            }
+
+            infoContents += '</div>';
+            swatch.append('<span class="shade">' + infoContents + '</span>');
+            swatch.find('.name').each(function() { $(this).css('width', width); });
+        });
+
+        $('.swatch').hover(
+            function() {
+                $(this).find('.shade').animate({height: '27px'}, 200);
+                $(this).find('.name').animate({opacity: '1'}, 200);
+            },
+            function() {
+                $(this).find('.shade').animate({height: '10px'}, 200);
+                $(this).find('.name').animate({opacity: '0'}, 200);
+            }
+        );
+    </script>
+</body>
+</html>

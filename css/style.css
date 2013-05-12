@@ -1,0 +1,54 @@
+h1 { margin-top: 30px; }
+.row-fluid { margin-top: -15px; }
+
+.swatch {
+    position: relative;
+    width: 100%;
+    height: 90px;
+    margin-top: 50px;
+    border-radius: 10px;
+}
+
+.swatch:hover {
+    box-shadow: 0 0 30px 3px #ddd;
+}
+
+.colour:first-child { border-radius: 7px 0 0 7px; }
+.colour:nth-last-child(2) { border-radius: 0 7px 7px 0; }
+
+.colour {
+    height: 100%;
+    display: inline-block;
+    margin: 0 -4px 0 0;
+}
+
+.shade {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 10px;
+    width: 100%;
+    background-color: black;
+    opacity: 0.15;
+    border-radius: 0 0 7px 7px;
+    text-align: center;
+}
+
+.info {
+    font-size: 20px;
+    font-weight: 150px;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.colour-names {
+    font-size: 9px;
+    color: #aaa;
+}
+
+.name {
+    display: inline-block;
+    height: 100%;
+    margin-top: 4px;
+    opacity: 0;
+}
