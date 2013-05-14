@@ -16,6 +16,8 @@ And when you load your page, you'll have this lovely thing staring at you:
 
 <img src="img/beach.png" align="center"/>
 
+Check out the examples section to see the animation too.
+
 ## Customizing
 
 The `div` can have any class you want, however the stylesheet supplied is only configured for the `.swatch` class. Using different classes would allow you to render groups of swatches at individual times by calling `swatchify()` on a different selector.
