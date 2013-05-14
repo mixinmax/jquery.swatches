@@ -3,7 +3,7 @@
  *
  * Copyright (c) 2013 Max Mackie <github@f33r.com>
  *
- * http://maxmackie.com/swatches
+ * http://maxmackie.com/jquery.swatches
  *
  * Permission is hereby granted, free of charge, to any person
  * obtaining a copy of this software and associated documentation

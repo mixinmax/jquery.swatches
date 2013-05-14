@@ -24,7 +24,7 @@ Two strings of data need to be provided by the `div`: `data-name` and `data-colo
 
 ## Examples
 
-For more examples, check out [the examples website](http://maxmackie.com/swatches)
+For more examples, check out [the examples website](http://maxmackie.com/jquery.swatches)
 
 ## Contributing
 
