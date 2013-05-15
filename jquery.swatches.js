@@ -49,12 +49,12 @@
 
     // hover animation
     $(document).on('mouseenter', '.holder', function() {
-        $(this).find('.shade').animate({height: '27px'}, 200);
-        $(this).find('.name').animate({opacity: '1'}, 200);
+        $(this).find('.shade').stop().animate({height: '27px'}, 200);
+        $(this).find('.name').stop().animate({opacity: '1'}, 200);
     })
     .on('mouseleave', '.holder', function() {
-        $(this).find('.shade').animate({height: '10px'}, 200);
-        $(this).find('.name').animate({opacity: '0'}, 200);
+        $(this).find('.shade').stop().animate({height: '10px'}, 200);
+        $(this).find('.name').stop().animate({opacity: '0'}, 200);
     });
 
 }( jQuery ));
