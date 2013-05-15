@@ -41,10 +41,10 @@
     left: 0;
     height: 10px;
     width: 100%;
-    background-color: black;
-    opacity: 0.15;
+    background-color: rgba(0,0,0,0.15);
     border-radius: 0 0 7px 7px;
     text-align: center;
+    color: rgba(0,0,0,0.4);
 }
 
 .color-names { 
@@ -55,8 +55,8 @@
 .name {
     display: inline-block;
     height: 100%;
-    margin-top: 4px;
     opacity: 0;
+    margin-top: 4px;
 }
 
 /* -----------------------------------------
@@ -64,7 +64,7 @@
    ----------------------------------------- */
 .info {
     font-size: 20px;
-    font-weight: 150px;
     text-align: center;
     margin-top: 10px;
+    color: #000;
 }
