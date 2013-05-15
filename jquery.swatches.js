@@ -30,31 +30,34 @@
     // gimme some swatches!
     $.fn.swatchify = function() {
         this.each(function() {
-            var name = $(this).data('name');
-            var colors = $(this).data('colors').split(',');
-            var width = 100/colors.length + '%';
-            var infoContents = '<div class="shade"><div class="color-names">'
+            var target  = $(this);
+            var name    = target.data('name');
+            var colors  = target.data('colors').split(',');
+            var width   = 100/colors.length + '%';
 
-            var holder = '<div class="holder">';
-            for (i = 0; i < colors.length; i++) {
-                infoContents += '<span class="name">' + colors[i] + '</span>';
-                holder += '<span class="color" style="width:' + width + ';background-color:' + colors[i] + '"></span>';
+            var infoContents = $('<div/>', {class: 'shade'});
+            var holder       = $('<div/>', {class: 'holder'});
+
+            for (var i = 0; i < colors.length; i++) {
+                infoContents.append( $('<span/>', {class: 'name'}).css('width', width).text(colors[i]) );
+                holder.append( $('<span/>', {class: 'color'}).css({width: width, 'background-color': colors[i]}) );
             }
-            holder += infoContents + '</div></div></div>';
-            $(this).append(holder);
-            $(this).append('<div class="info">' + name + '</div>');
-            $(this).find('.name').each(function() { $(this).css('width', width) });
+
+            holder.append(infoContents);
+            target.append(holder);
+
+            target.append( $('<div/>', {class: 'info'}).text(name) );
         });
     };
 
     // hover animation
     $(document).on('mouseenter', '.holder', function() {
-        $(this).find('.shade').animate({height: '27px'}, 200);
-        $(this).find('.name').animate({opacity: '1'}, 200);
+        $(this).find('.shade').stop().animate({height: '27px'}, 200);
+        $(this).find('.name').stop().animate({opacity: '1'}, 200);
     })
     .on('mouseleave', '.holder', function() {
-        $(this).find('.shade').animate({height: '10px'}, 200);
-        $(this).find('.name').animate({opacity: '0'}, 200);
+        $(this).find('.shade').stop().animate({height: '10px'}, 200);
+        $(this).find('.name').stop().animate({opacity: '0'}, 200);
     });
 
 }( jQuery ));
