@@ -12,7 +12,7 @@ Then, after including `jquery.swatches.js`, call the `swatchify()` function on t
 
     $('.swatch').swatchify();
 
-And when you load your page, you'll have this lovely thing staring at you:
+And when you load your page, you'll have this lovely thing staring at you (the right is what it looks like when you hover over the swatch):
 
 <img src="img/beach.png" align="center"/>
 
