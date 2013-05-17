@@ -39,7 +39,7 @@
             var holder       = $('<div/>', {class: 'holder'});
 
             for (var i = 0; i < colors.length; i++) {
-                infoContents.append( $('<span/>', {class: 'name'}).css('width', width).text(colors[i]) );
+                infoContents.append( $('<span/>', {class: 'name'}).css('width', width).text(colors[i].toUpperCase()) );
                 holder.append( $('<span/>', {class: 'color'}).css({width: width, 'background-color': colors[i]}) );
             }
 
