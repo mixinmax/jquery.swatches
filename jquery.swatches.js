@@ -29,7 +29,7 @@
 (function($) {
     // gimme some swatches!
     $.fn.swatchify = function() {
-        this.each(function() {
+        return this.each(function() {
             var target  = $(this);
             var name    = target.data('name');
             var colors  = typeof target.data('colors') === 'string' ? target.data('colors').split(',') : target.data('colors');
