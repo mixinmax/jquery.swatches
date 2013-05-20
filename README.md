@@ -24,6 +24,14 @@ The `div` can have any class you want, however the stylesheet supplied is only c
 
 Two strings of data need to be provided by the `div`: `data-name` and `data-colors`. The name must be a string representing the name of the swatch. The `data` string is a comma-seperate list of hex color codes. The list can be as long as you want, each color code will be used to create a portion of the swatch.
 
+You can also provide a `.swatch` element with an javascript array of colors in the `data-colors` attribute. For example:
+
+    // assume <div id="test-swatch" class="swatch" data-name="Test"></div>
+    var arr = ['#F35C9F','#F3F3F3'];
+    var test = $('#test-swatch');
+    test.data('colors', arr);
+    $('.swatch').swatchify(); 
+
 ## Examples
 
 For more examples, check out [the examples website](http://maxmackie.com/jquery.swatches)
