@@ -32,7 +32,7 @@
         this.each(function() {
             var target  = $(this);
             var name    = target.data('name');
-            var colors  = target.data('colors').split(',');
+            var colors  = typeof target.data('colors') === 'string' ? target.data('colors').split(',') : target.data('colors');
             var width   = 100/colors.length + '%';
 
             var infoContents = $('<div/>', {class: 'shade'});
