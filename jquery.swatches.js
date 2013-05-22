@@ -47,6 +47,8 @@
             target.append(holder);
 
             target.append( $('<div/>', {class: 'info'}).text(name) );
+            
+            target.addClass('jqueryswatches');
         });
     };
 
