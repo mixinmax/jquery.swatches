@@ -53,11 +53,11 @@
     };
 
     // hover animation
-    $(document).on('mouseenter', '.holder', function() {
+    $(document).on('mouseenter', '.jqueryswatches .holder', function() {
         $(this).find('.shade').stop().animate({height: '27px'}, 200);
         $(this).find('.name').stop().animate({opacity: '1'}, 200);
     })
-    .on('mouseleave', '.holder', function() {
+    .on('mouseleave', '.jqueryswatches .holder', function() {
         $(this).find('.shade').stop().animate({height: '10px'}, 200);
         $(this).find('.name').stop().animate({opacity: '0'}, 200);
     });
