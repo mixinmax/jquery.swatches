@@ -2,7 +2,7 @@
     holders hold the colours and everything
     else for the swatches
    ----------------------------------------- */
-.holder {
+.jqueryswatches .holder {
     position: relative;
     width: 100%;
     height: 90px;
@@ -10,7 +10,7 @@
     border-radius: 10px;
 }
 
-.holder:hover { 
+.jqueryswatches .holder:hover { 
     box-shadow: 0 0 30px 3px #ddd; 
 }
 
@@ -18,15 +18,15 @@
     everything below styles the individual
     color blocks
    ----------------------------------------- */
-.color:first-child { 
+.jqueryswatches .color:first-child { 
     border-radius: 7px 0 0 7px; 
 }
 
-.color:nth-last-child(2) { 
+.jqueryswatches .color:nth-last-child(2) { 
     border-radius: 0 7px 7px 0; 
 }
 
-.color { 
+.jqueryswatches .color { 
     height: 100%; 
     display: inline-block; 
 }
@@ -35,7 +35,7 @@
     the shade class contains the names of
     the colors for the popup effect
    ----------------------------------------- */
-.shade {
+.jqueryswatches .shade {
     position: absolute;
     bottom: 0;
     left: 0;
@@ -48,12 +48,12 @@
     color: #FFF;
 }
 
-.color-names { 
+.jqueryswatches .color-names { 
     font-size: 9px; 
     color: #aaa; 
 }
 
-.name {
+.jqueryswatches .name {
     display: inline-block;
     height: 100%;
     opacity: 0;
@@ -64,7 +64,7 @@
 /* -----------------------------------------
     styles the name of the swatch
    ----------------------------------------- */
-.info {
+.jqueryswatches .info {
     font-size: 20px;
     text-align: center;
     margin-top: 10px;
