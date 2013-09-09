@@ -34,7 +34,7 @@ You can also provide a `.swatch` element with an javascript array of colors in t
 
 ## Examples
 
-For more examples, check out [the examples website](http://maxmackie.com/jquery.swatches)
+For more examples, check out [the examples website](http://maxmackie.github.io/jquery.swatches/)
 
 ## Contributing
 
